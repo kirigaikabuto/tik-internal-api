@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/djumanoff/amqp"
 	setdata_common "github.com/kirigaikabuto/setdata-common"
 	tik_lib "github.com/kirigaikabuto/tik-lib"
@@ -12,7 +13,7 @@ import (
 
 var (
 	configName           = "main"
-	configPath           = "./config/"
+	configPath           = "/config/"
 	version              = "0.0.1"
 	amqpHost             = ""
 	amqpPort             = ""
@@ -38,6 +39,7 @@ func parseEnvFile() {
 		panic("main, get rootDir error" + err.Error())
 		return
 	}
+	fmt.Println(filepath)
 	viper.AddConfigPath(filepath + configPath)
 	viper.SetConfigName(configName)
 	err = viper.ReadInConfig()
