@@ -238,6 +238,8 @@ github.com/kirigaikabuto/setdata-common v1.0.1-0.20211104130143-ab6a82248106 h1:
 github.com/kirigaikabuto/setdata-common v1.0.1-0.20211104130143-ab6a82248106/go.mod h1:A5j+H7WGjHH0vqZ2oYNqrx8OpZfOd5Lp5PsxSqyXmOk=
 github.com/kirigaikabuto/tik-lib v0.0.0-20220203193940-e295ccd9f737 h1:MkBLFsRzB9yLOPFxIinaTmlhDzNzMF95gnk2IQIjSS8=
 github.com/kirigaikabuto/tik-lib v0.0.0-20220203193940-e295ccd9f737/go.mod h1:SEgcNZia7NrlXXObsGo0QAa0wOqC5QkuVLOqcp96Mqg=
+github.com/kirigaikabuto/tik-lib v0.0.0-20220207132415-31e11d0ec6e0 h1:mXQ6RS5bKP7C9/6FQvPSFHDmQ6E5qrpuDBSLGP0rZwk=
+github.com/kirigaikabuto/tik-lib v0.0.0-20220207132415-31e11d0ec6e0/go.mod h1:SEgcNZia7NrlXXObsGo0QAa0wOqC5QkuVLOqcp96Mqg=
 github.com/kisielk/errcheck v1.5.0/go.mod h1:pFxgyoBC7bSaBwPgfKdkLd5X25qrDl4LWUI2bnpBCr8=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=

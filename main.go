@@ -90,7 +90,11 @@ func run(c *cli.Context) error {
 	if err != nil {
 		return err
 	}
-	service := tik_lib.NewService(userStore)
+	fileStore, err := tik_lib.NewPostgresFileStore(cfg)
+	if err != nil {
+		return err
+	}
+	service := tik_lib.NewService(userStore, fileStore)
 	amqpEndpoints := tik_lib.NewAmqpEndpoints(setdata_common.NewCommandHandler(service))
 	srv.Endpoint("user.create", amqpEndpoints.CreateUser())
 	srv.Endpoint("user.getById", amqpEndpoints.GetUserById())
@@ -98,6 +102,13 @@ func run(c *cli.Context) error {
 	srv.Endpoint("user.update", amqpEndpoints.UpdateUser())
 	srv.Endpoint("user.delete", amqpEndpoints.DeleteUser())
 	srv.Endpoint("user.list", amqpEndpoints.ListUser())
+
+	srv.Endpoint("file.create", amqpEndpoints.CreateFile())
+	srv.Endpoint("file.getById", amqpEndpoints.GetFileById())
+	srv.Endpoint("file.update", amqpEndpoints.UpdateFile())
+	srv.Endpoint("file.delete", amqpEndpoints.DeleteFile())
+	srv.Endpoint("file.list", amqpEndpoints.ListFiles())
+
 	err = srv.Start()
 
 	if err != nil {
@@ -105,7 +116,6 @@ func run(c *cli.Context) error {
 	}
 	return nil
 }
-
 
 func main() {
 	port := os.Getenv("PORT")
